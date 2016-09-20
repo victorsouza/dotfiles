@@ -99,7 +99,7 @@ class RepoStats:
         'behind': u'\u2B07',
         'staged': u'\u2714',
         'not_staged': u'\u270E',
-        'untracked': u'\u2753',
+        'untracked': u'\u2756', #u'\u2753',
         'conflicted': u'\u273C'
     }
 
@@ -697,9 +697,9 @@ def add_root_segment(powerline):
     bg = Color.CMD_PASSED_BG
     fg = Color.CMD_PASSED_FG
     # Commented return values
-    #if powerline.args.prev_error != 0:
-    #    fg = Color.CMD_FAILED_FG
-    #    bg = Color.CMD_FAILED_BG
+    if powerline.args.prev_error != 0:
+        fg = Color.CMD_FAILED_FG
+        bg = Color.CMD_FAILED_BG
     powerline.append(root_indicators[powerline.args.shell], fg, bg)
 
 
