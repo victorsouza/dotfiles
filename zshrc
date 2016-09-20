@@ -1,6 +1,10 @@
 export EDITOR="atom -nw"
 export PATH=/usr/sbin:/sbin:${PATH}
 
+if [[ $TERMINIX_ID ]]; then
+  source /etc/profile.d/vte.sh
+fi
+
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 
 antigen-use oh-my-zsh
@@ -11,8 +15,6 @@ antigen bundles <<EOBUNDLES
   zsh-users/zsh-completions src
   colored-man-pages
 EOBUNDLES
-
-antigen-theme avit
 
 function powerline_precmd() {
 	PS1="$(~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
@@ -29,10 +31,6 @@ function install_powerline_precmd() {
 
 if [ "$TERM" != "linux" ]; then
 	install_powerline_precmd
-fi
-
-if [[ $TERMINIX_ID ]]; then
-  source /etc/profile.d/vte.sh
 fi
 
 antigen-apply
