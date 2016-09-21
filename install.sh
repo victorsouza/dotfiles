@@ -3,10 +3,11 @@ DIR=$PWD
 
 # install powerline-shell
 $DIR/powerline-shell/install.sh
+ln -sf $DIR/powerline-shell.py $DIR/powerline-shell/powerline-shell.py
 
 # create symlinks
 ln -sf $DIR/zshrc ~/.zshrc
-ln -sf $DIR/powerline-shell.py $DIR/powerline-shell/powerline-shell.py
+ln -sf $DIR/gitconfig ~/.gitconfig
 
 echo "Installation complete! Relogin to take effect"
 

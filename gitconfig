@@ -1,0 +1,5 @@
+[user]
+	email = souza.vss@gmail.com
+	name = Victor Seixas Souza
+[credential]
+	helper = cache --timeout=7200
