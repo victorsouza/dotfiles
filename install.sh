@@ -7,6 +7,7 @@ ln -sf $DIR/powerline-shell.py $DIR/powerline-shell/powerline-shell.py
 
 # create symlinks
 ln -sf $DIR/zshrc ~/.zshrc
+ln -sf $DIR/bashrc ~/.bashrc
 ln -sf $DIR/gitconfig ~/.gitconfig
 
 echo "Installation complete! Relogin to take effect"
