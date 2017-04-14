@@ -2,7 +2,9 @@ echo "Installing dotfiles"
 DIR=$PWD
 
 # install powerline-shell
-$DIR/powerline-shell/install.sh
+cd $DIR/powerline-shell/
+python install.py
+cd $DIR
 ln -sf $DIR/powerline-shell.py $DIR/powerline-shell/powerline-shell.py
 
 # create symlinks
